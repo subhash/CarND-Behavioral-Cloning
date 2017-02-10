@@ -27,12 +27,20 @@ app = Flask(__name__)
 model = None
 prev_image_array = None
 
+def clipped(im):
+    h, w, _ = im.shape
+    nh, nw = (h-66)//2, (w-200)//2
+    im = im[nh:nh+66, nw:nw+200, :]
+    return im
+
 def transform_image(im):
     im = cv2.cvtColor(im, cv2.COLOR_RGB2YUV)
-    im = im[:,:,0]
-    mn, mx = np.min(im), np.max(im)
-    a, b = 0., 1.
-    im = a + ((im-mn)/(mx-mn))*(b-a)
+    #im = clipped(im)
+    im = im[:,:,0:1]
+    # mn, mx = np.min(im), np.max(im)
+    # a, b = 0., 1.
+    #im = a + ((im-mn)/(mx-mn))*(b-a)
+    print(im.shape)
     return im
 
 @sio.on('telemetry')
@@ -48,7 +56,7 @@ def telemetry(sid, data):
     image = Image.open(BytesIO(base64.b64decode(imgString)))
     image_array = np.asarray(image)
     image_array = transform_image(image_array)
-    image_array = np.reshape(image_array, [160, 320, 1])
+    #image_array = np.reshape(image_array, [160, 320, 1])
     transformed_image_array = image_array[None, :, :, :]
     # This model currently assumes that the features of the model are just the images. Feel free to change this.
     steering_angle = float(model.predict(transformed_image_array, batch_size=1))
@@ -78,9 +86,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     model = load_model(args.model)
-    print(model)
-    print(model.predict(np.zeros([1, 160, 320, 1])))
-
     # wrap Flask application with engineio's middleware
     app = socketio.Middleware(sio, app)
 
