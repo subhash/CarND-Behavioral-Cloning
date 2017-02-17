@@ -13,15 +13,15 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[samplingImage]: ./images/sampling.png "Sampling"
-[balancingImage]: ./images/balancing.png "Balancing"
-[flippingImage]: ./images/flipping.png "Flipping"
-[translationImage]: ./images/translation.png "Translation"
-[flippingImage1]: ./images/flipping1.png "Flipped Image"
-[flippingImage2]: ./images/flipping2.png "Flipped Image"
-[translationImage1]: ./images/translation1.png "Translated Image"
-[translationImage2]: ./images/translation2.png "Translated Image"
-[translationImage3]: ./images/translation3.png "Translated Image"
+[samplingImage]: ./images/sampled.png "Sampling"
+[balancingImage]: ./images/balanced.png "Balancing"
+[flippingImage]: ./images/flipped.png "Flipping"
+[translationImage]: ./images/translated.png "Translation"
+[flippingImage1]: ./images/flipped1.png "Flipped Image"
+[flippingImage2]: ./images/flipped2.png "Flipped Image"
+[translationImage1]: ./images/translated1.png "Translated Image"
+[translationImage2]: ./images/translated2.png "Translated Image"
+[translationImage3]: ./images/translated3.png "Translated Image"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
