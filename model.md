@@ -178,13 +178,11 @@ Flipping can provide examples of driving on both sides of the road
 
 ![alt text][flippingImage1]
 
+![alt text][flippingImage2]
+
 Translation can provide interesting examples from pre-existing data
 
 ![alt text][translationImage1]
-
-![alt text][translationImage2]
-
-![alt text][translationImage3]
 
 After augmentation, I had 31356 samples, which were converted to YUV colorspace. These would get cropped and normalised from within the eras layers.
 
