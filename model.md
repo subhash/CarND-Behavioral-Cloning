@@ -97,7 +97,7 @@ At the end of the process, the vehicle was able to drive successfully on both tr
 ####2. Final Model Architecture
 
 Here is a summary of the final model architecture:
-
+```
 ____________________________________________________________________________________________________
 Layer (type)                     Output Shape          Param #     Connected to                     
 ====================================================================================================
@@ -150,26 +150,36 @@ Epoch 4/5
 575s - loss: 0.0342 - val_loss: 0.0330
 Epoch 5/5
 608s - loss: 0.0337 - val_loss: 0.0334
-
+```
 
 ####3. Creation of the Training Set & Training Process
 
 Sampling - picking a subset of the low steering angle data
+
 ![alt text][samplingImage]
+
 Balancing - including the left camera sample (add offset to steering angle) and right camera sample (subtract offset to steering angle)
+
 ![alt text][balancingImage]
+
 Flipping - for a selection of extreme angles, flip the image and use the negative of the corresponding steering angle
+
 ![alt text][flippingImage]
+
 Translation - variety of x and y translation to account for extreme road positions and vertical climbs
+
 ![alt text][translationImage]
 
-
 Flipping can provide examples of driving on both sides of the road
+
 ![alt text][flippingImage1]
 
 Translation can provide interesting examples from pre-existing data
+
 ![alt text][translationImage1]
+
 ![alt text][translationImage2]
+
 ![alt text][translationImage3]
 
 After augmentation, I had 31356 samples, which were converted to YUV colorspace. These would get cropped and normalised from within the eras layers.
