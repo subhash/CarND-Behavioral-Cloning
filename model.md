@@ -12,7 +12,7 @@ The goals / steps of this project are the following:
 
 
 [//]: # (Image References)
-
+[unbalancedImage]: ./images/unbalanced.png "Unbalanced"
 [samplingImage]: ./images/sampled.png "Sampling"
 [balancingImage]: ./images/balanced.png "Balancing"
 [flippingImage]: ./images/flipped.png "Flipping"
@@ -153,6 +153,10 @@ Epoch 5/5
 ```
 
 ####3. Creation of the Training Set & Training Process
+
+The initial dataset is heavily unbalanced with a strong bias for low steering angles
+
+![alt text][unbalancedImage]
 
 Sampling - picking a subset of the low steering angle data
 
