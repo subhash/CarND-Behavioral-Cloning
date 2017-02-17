@@ -13,15 +13,15 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[samplingImage]: ./examples/placeholder.png "Model Visualization"
-[balancingImage]: ./examples/placeholder.png "Grayscaling"
-[flippingImage]: ./examples/placeholder_small.png "Recovery Image"
-[translationImage]: ./examples/placeholder_small.png "Recovery Image"
-[flippingImage1]: ./examples/placeholder_small.png "Recovery Image"
-[flippingImage2]: ./examples/placeholder_small.png "Normal Image"
-[translationImage1]: ./examples/placeholder_small.png "Recovery Image"
-[translationImage2]: ./examples/placeholder_small.png "Recovery Image"
-[translationImage3]: ./examples/placeholder_small.png "Recovery Image"
+[samplingImage]: ./images/sampling.png "Sampling"
+[balancingImage]: ./images/balancing.png "Balancing"
+[flippingImage]: ./images/flipping.png "Flipping"
+[translationImage]: ./images/translation.png "Translation"
+[flippingImage1]: ./images/flipping1.png "Flipped Image"
+[flippingImage2]: ./images/flipping2.png "Flipped Image"
+[translationImage1]: ./images/translation1.png "Translated Image"
+[translationImage2]: ./images/translation2.png "Translated Image"
+[translationImage3]: ./images/translation3.png "Translated Image"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
